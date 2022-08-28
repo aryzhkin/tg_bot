@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  bot_backend:
+    build: 
+      context: bot_backend/
+      args:
+        DOMAIN: ${DOMAIN}
+        SERVER: ${SERVER}
+        PORT: ${PORT}
+        CERT_COUNTRY_NAME: ${CERT_COUNTRY_NAME}
+        CERT_STATE: ${CERT_STATE}
+        CERT_LOCATION: ${CERT_LOCATION}
+        CERT_ORG_NAME: ${CERT_ORG_NAME}
+        CERT_ORG_UNIT_NAME: ${CERT_ORG_UNIT_NAME}
+        CERT_COMMON_NAME: ${CERT_COMMON_NAME}
+        CERT_EMAIL: ${CERT_EMAIL}
+    command: python3 ./main.py
+    restart: unless-stopped
+    container_name: bot_backend
+    image: tg_bot/bot_backend:1
+
+    environment:
+      - SERVER=${SERVER}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_SUPPORT_CHAT_ID=${TELEGRAM_SUPPORT_CHAT_ID}
+      - DOMAIN=${DOMAIN}
+      - PORT=${PORT}
+
+    ports:
+      - ${PORT}:${PORT}
