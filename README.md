@@ -11,6 +11,8 @@
 ## 🧐 About <a name = "about"></a>
 This is a telegram bot for teams that helps people by answering their questions: you can gather your entire team into one tg chat, where messages from people will come, and anyone in this group can answer messages.
 
+This bot use [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) (it is under [LGPL-3](https://www.gnu.org/licenses/lgpl-3.0.html))
+
 ## 🎈 How it works <a name = "howitworks"></a>
 - People write their questions to the bot
 - Bot forwards messages to your group
