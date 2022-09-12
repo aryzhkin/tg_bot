@@ -30,11 +30,11 @@ This bot use [python-telegram-bot](https://github.com/python-telegram-bot/python
 ```
 docker compose build .
 ```
-7. Run
+8. Run
 ```
 docker compose up -d
 ```
-8. In case of any problems - feel free to contact me.
+9. In case of any problems - feel free to contact me.
 
 ## ✍️ Contacts <a name = "contacts"></a>
 - My name is Andrey Ryzhkin
